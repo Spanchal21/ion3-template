@@ -1,4 +1,47 @@
-This is a ionic 3 Advanced template project.
+## This is a ionic 3 Advanced template project.
+
+** included Functionality to this template **
+
+Multi-language,
+
+Super tab,
+
+Theming Dark and Light,
+
+Sweet alert + ionic3,
+
+Left right side menu,
+
+Lazy loading pages,
+
+Progressive Web App,
+
+Pan view,
+
+Sidemenu Options + Sub menu options,
+
+Parallax header ,
+
+Expandable header,
+
+Theming Dark and Light,
+
+Sweet alert + ionic3,
+
+Sorting searching filtering list,
+
+Lazy loading pages,
+
+Progressive Web App,
+
+Android permission plugin,
+
+Platform wise component manage + events
+
+## How to use this template
+
+To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository
+and paste into your created project.
 
 ### With the Ionic CLI:
 ```bash
@@ -10,7 +53,7 @@ This is a ionic 3 Advanced template project.
 6 - $ ionic serve
 ```
 
-Then, to run it, cd into `mySideMenu` and run:
+Then, to run it, cd into `ion-panview` and run:
 
 ```bash
 $ ionic cordova platform add ios
