@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sweet Alert</ion-title>
+     <ion-buttons end>
+      <button ion-button menuToggle="right" >
+        <ion-icon name="ios-mail"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card padding>
+	<b>1- install</b> 
+	<p>npm i -s ng2-sweetalert2</p>
+
+	<a href="https://www.npmjs.com/package/ng2-sweetalert2">reference Link</a>
+	<br/>
+	<b>2- import</b>
+	<p>import in app.module.ts  and 
+		"SweetAlertService" put in provider array </p>
+
+	<b>3- import to particuler page</b>
+	<p> import swal from "sweetalert2";</p>
+	
+</ion-card>
+	<ion-row>
+		<ion-col>
+			<button ion-button block (click)="fnDelete()">Delete Alert</button>
+		</ion-col>
+		<!-- <ion-col col-6>
+			<button ion-button block (click)="fnDelete()">confirm Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">prompt Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">alert Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">question Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">success Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">warning Alert</button>
+		</ion-col>
+		<ion-col col-6>
+			<button ion-button block (click)="fnDelete()">error Alert</button>
+		</ion-col> -->
+	</ion-row>
+
+</ion-content>

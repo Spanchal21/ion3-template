@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Canvas Animation</ion-title>
+     <ion-buttons end>
+      <button ion-button menuToggle="right" >
+        <ion-icon name="ios-mail"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-row>
+  <ion-col>
+         <canvas #canvasObj ></canvas>
+     </ion-col>
+     <ion-col>
+         <ion-list>
+            <button *ngIf="isPlaying" ion-button color="primary" (click)="stopAnimation()">Stop animation</button>
+
+            <!-- Display Reset animation button IF particles have stopped being generated -->
+            <button *ngIf="!isPlaying" ion-button color="danger" (click)="replayAnimation()">Reset animation</button>
+         </ion-list>
+
+         <!-- Allow user to select number of particles for generation (between 1 to 10) -->
+         <ion-list>
+            <ion-label>Number of particles ( 1 - 10)</ion-label>
+            <ion-range step="1" snaps="true" min="1" max="10" [(ngModel)]="particleQuantity" (ionChange)="refreshCanvas($event, particleQuantity)">
+               <ion-icon range-left small name="remove"></ion-icon>
+               <ion-icon range-right name="add"></ion-icon>
+            </ion-range>
+         </ion-list>
+     </ion-col>
+</ion-row>
+</ion-content>
+ 

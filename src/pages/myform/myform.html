@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   
+    <ion-title>Platform Events</ion-title>
+    <ion-buttons end>
+    <button ion-button menuToggle="right" >
+      <ion-icon name="ios-mail"></ion-icon>
+   </button>
+ </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  This plugin is designed to support Android new permissions checking mechanism.
+
+   <button ion-button (click)="fnPermission()">Android permission</button>
+
+  <!--  <button showWhen="ios" ion-button (click)="fn3DTouch()">ios 3D Touch</button>
+   <button showWhen="android" ion-button (click)="fnPermission()">Android permission</button> -->
+
+<ion-list>
+  
+    <ion-item  showWhen="android">
+     I am visible on Android!
+     <ion-icon item-right name="logo-android"></ion-icon>
+    </ion-item>
+
+    <ion-item showWhen="ios">
+     I am visible on iOS!
+     <ion-icon item-right name="logo-apple"></ion-icon>
+    </ion-item>
+
+    <ion-item showWhen="android,ios">
+     I am visible on Android and iOS!
+    <ion-icon item-right name="logo-android"></ion-icon>
+    <ion-icon item-right name="logo-apple"></ion-icon>
+    </ion-item>
+
+    <ion-item showWhen="portrait">
+     I am visible on Portrait Mode!
+     <ion-icon item-right name="ios-phone-portrait"></ion-icon>
+    </ion-item>
+
+    <ion-item showWhen="landscape">
+     I am visible on Landscape Mode!
+     <ion-icon item-right name="ios-phone-landscape"></ion-icon>
+    </ion-item>
+
+</ion-list>
+
+
+  <!-- =========  tap, press, pan, swipe, rotate, pinch ========= -->
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button block (swipe)="tapEvent($event)">
+       sipe event
+      </button>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button block (click)="tapEvent($event)">
+       click event
+      </button>
+      </ion-col>
+    <ion-col col-6>
+      <button ion-button block (press)="tapEvent($event)">
+       press event
+      </button>
+      </ion-col>
+    <ion-col col-6>
+      <button ion-button block (pan)="tapEvent($event)">
+       pan event
+      </button>
+      </ion-col>
+    <ion-col col-6>
+      <button ion-button block (pinch)="tapEvent($event)">
+       pinch event
+      </button>
+      </ion-col>
+    <ion-col col-6>
+      <button ion-button block (rotate)="tapEvent($event)">
+        rotate event
+      </button>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-col text-center>
+    <br/>
+    <h1>
+      <ion-icon name="heart" color="danger" (click)="fnIcon()" [isActive]="isActive"> </ion-icon> 
+    </h1>
+    <p> click to active/inactive </p>
+  </ion-col>
+
+
+
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon><ion-label>facebook</ion-label></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon><ion-label>twitter</ion-label></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon><ion-label>vimeo</ion-label></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon><ion-label>googleplus</ion-label></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  
+
+
+   <!-- <button ion-button (click)="openCalendar()">Open Calendar on Current Date</button> -->
+
+</ion-content>

@@ -1,0 +1,15 @@
+<!-- <ion-tabs selectedIndex="2" tabsHighlight="true" tabsPlacement="top">
+	<ion-tab [root]="tab4Root" tabTitle="Super Tab" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="tab1Root" tabTitle="Animation" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Theaming" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Sweet Alert" tabIcon="information-circle"></ion-tab>
+</ion-tabs> -->
+
+ <super-tabs toolbarColor="light" indicatorColor="light" (tabSelect)="onTabSelect($event)" [config]="{ sideMenu: 'left' }" scrollTabs="true" tabsPlacement="bottom" >
+      <super-tab [root]="tab1Root" title="sorting"  id="tab1Root"></super-tab>
+      <super-tab [root]="tab2Root" title="Language"  id="tab2Root"></super-tab>
+      <super-tab [root]="tab3Root" title="Events"  id="tab3Root"></super-tab>
+      <super-tab [root]="tab4Root" title="Animation"  id="tab4Root"></super-tab>
+      <super-tab [root]="tab5Root" title="Tabs"  id="tab5Root"></super-tab>
+      
+    </super-tabs> 

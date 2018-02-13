@@ -1,0 +1,65 @@
+
+<div class="{{theme}}">
+<ion-split-pane>
+<ion-menu type="push" [content]="content">  <!-- style="max-width: 270px;" -->
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Ionic Corner</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <div *ngFor="let d of acrodianmenu let i=index ">
+        <ion-item *ngIf="d.component == ''"  (click)="toggleDetails(i)" [ngClass]="{active: isGroupShown(i)}">
+           <ion-icon item-start [name]="d.icon"></ion-icon>
+            {{d.headername}}
+            <ion-icon  item-right [name]="isGroupShown(i) ? 'ios-arrow-down' : 'ios-arrow-forward'"></ion-icon>
+        </ion-item>
+
+        <button ion-item *ngIf="d.component != ''"  menuClose ion-item (click)="openPage(d)">
+        <ion-icon item-start [name]="d.icon"></ion-icon>
+          {{d.headername}}
+        </button>
+
+        <div *ngIf="isGroupShown(i)">
+           <button ion-item menuClose *ngFor="let p of d.page" (click)="fnAboutModel()">
+              <ion-icon item-start [name]="p.icon"></ion-icon>
+              {{p.title}}
+           </button>
+        </div>
+    </div>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage"  main #content swipeBackEnabled="false" ></ion-nav> 
+</ion-split-pane>
+
+<!-- ====================== Right Menu =========================== -->
+<ion-menu type="overlay" [content]="content" side="right">
+  <ion-header >
+    <ion-toolbar>
+      <ion-title>Ionic Advanced</ion-title>
+      <ion-buttons end>
+    <button ion-button icon-only menuClose="right" >
+      <ion-icon name="md-close"></ion-icon>
+    </button>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+        <ion-item menuClose="right" *ngFor="let d of pages" (click)="openPage(d)">
+           <ion-icon item-start [name]="d.icon"></ion-icon>
+            {{d.title}}
+        </ion-item>
+
+        <ion-item>
+              <ion-icon item-start name="color-palette"></ion-icon>
+              Set Theme
+              <button item-end *ngIf="theme =='light-theme'" menuClose="right" ion-button round color="dark" (click)="toggleTheme()">dark</button>
+              <button item-end *ngIf="theme =='dark-theme'" menuClose="right" ion-button round outline color="light" (click)="toggleTheme()">light</button>
+        </ion-item>
+  </ion-content>
+
+</ion-menu>
+</div>
+<!-- <ion-nav [root]="rootPage" #mycontent swipeBackEnabled="false"></ion-nav> -->

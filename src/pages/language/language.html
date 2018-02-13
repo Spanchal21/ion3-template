@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Multi Language</ion-title>
+     <ion-buttons end>
+      <button ion-button menuToggle="right" >
+        <ion-icon name="ios-mail"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card padding>
+  <b>dependencies</b>
+  <p>
+    npm install @ngx-translate/core @ngx-translate/http-loader — save
+  </p>
+
+  <a href="https://medium.com/@salonimalhotra1ind/how-to-build-ionic-3-multi-language-app-b5a34d105b9">
+    Reference Link
+  </a>
+</ion-card>
+
+  <h2>{{"language" | translate}}</h2>
+
+ <button ion-button (click)="gnGujarati()">gujarati</button>
+ <button ion-button (click)="gnHindi()">hindi</button>
+ <button ion-button (click)="gnEnglish()">english</button>
+	
+</ion-content>

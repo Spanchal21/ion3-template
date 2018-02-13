@@ -1,0 +1,47 @@
+<ion-header>
+
+    <expandable-header [scrollArea]="mycontent" headerHeight="65">
+      <ion-toolbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-searchbar round [(ngModel)]="SearchTerm" (ionCancel)="onCancel($event)" (ionInput)="setFilteredItems()"  [showCancelButton]="true">
+      </ion-searchbar> 
+      <ion-buttons end>
+        <button ion-button menuToggle="right" >
+          <ion-icon name="ios-mail"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+    </expandable-header>
+
+  <ion-toolbar text-right >
+  	<ion-buttons>
+  	<button ion-button clear icon-end (click)="fnRefresh()">refresh <ion-icon name="refresh"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnSum()">sum <ion-icon name="ios-add-circle-outline"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnMax()">max <ion-icon name="checkmark-circle-outline"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnFind()">find <ion-icon name="search"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnLowHigh()">low-high <ion-icon name="ios-cash-outline"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnHighLow()">high-low <ion-icon name="ios-cash-outline"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnAtoZ()">A-Z <ion-icon name="trending-up"></ion-icon></button>
+  	<button ion-button clear icon-end (click)="fnZtoA()">Z-A <ion-icon name="trending-down"></ion-icon></button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen #mycontent>
+  <div *ngIf="searching" margin-top text-center>
+        <ion-spinner></ion-spinner>
+      </div>
+	<ion-row>
+		<ion-col col-xs-1 col-sm-6 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of modufiedData">
+			<ion-item>
+				<h2 >{{item.name}}</h2>
+				<p>{{item.email}} </p>
+				<ion-note item-end>Salary : {{item.salary}}K</ion-note>
+			</ion-item>
+		</ion-col>
+
+	</ion-row>
+</ion-content>

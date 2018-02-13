@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perallax Header</ion-title>
+     <ion-buttons end>
+      <button ion-button menuToggle="right" >
+        <ion-icon name="ios-mail"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content parallax-header>
+
+  <div class="header-image"></div>
+ 
+  <div class="main-content">
+
+<ion-card padding>
+    <b>1 - install</b>
+    <p>npm install @ionic/app-scripts@nightly</p>
+    <p>npm install --save ionic-angular@nightly</p>
+
+    <b>2 - Create directive </b>
+    <p>ionic g directive ParallaxHeader</p>
+
+    <b>3 - Reference Link</b>
+    <p><a href="https://www.joshmorony.com/high-performance-parallax-animation-in-ionic-2/"> Parallax Header Animation </a></p>
+    
+    </ion-card>
+
+    <ion-card padding>
+
+    <b>4 - Dummy content for scrolling</b>
+  	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <br/>
+ 
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <br/>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ <br/>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+ </ion-card>
+  <button ion-button secondary (click)="scrollToTop()">click to go up</button>
+  </div>
+
+
+
+</ion-content>
