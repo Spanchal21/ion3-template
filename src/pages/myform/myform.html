@@ -88,8 +88,6 @@
     </ion-col>
   </ion-row>
 
-
-
   <ion-col text-center>
     <br/>
     <h1>
@@ -110,9 +108,33 @@
     </ion-fab-list>
   </ion-fab>
 
-  
 
 
-   <!-- <button ion-button (click)="openCalendar()">Open Calendar on Current Date</button> -->
+
+
+
+
+
+<ion-list>
+    <ion-list-header (click)="accrodionDetails(accrodion)">
+      Accordion Example.
+      <ion-icon color="primary" item-end [name]="accrodion.icon"></ion-icon>
+    </ion-list-header>
+    <ion-item no-padding *ngIf="accrodion.showDetails">
+      <h2>Ionic 2 Accordion Example this is content area of Accordion.</h2>
+    </ion-item>
+
+    <div *ngFor="let d of data let i=index ">
+      <ion-list-header (click)="accrodionListDetails(i)" [ngClass]="{active: isGroupShown(i)}">
+            Accordion List item {{d.name}}
+        <ion-icon color="primary" item-end [name]="isGroupShown(i) ? 'ios-arrow-dropdown' : 'ios-arrow-dropup'"></ion-icon>
+      </ion-list-header>
+      <ion-item *ngIf="isGroupShown(i)">
+              <h2>This is Accordion {{d.detail}} content area.</h2>
+      </ion-item>
+    </div>
+</ion-list>
+
+          
 
 </ion-content>
